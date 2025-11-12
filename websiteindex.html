@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Pachauri - BMS Finance Candidate</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 0;
+            animation: fadeInDown 1s ease;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #a0a0a0;
+            margin-bottom: 30px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 0.95em;
+            padding: 8px 16px;
+            border: 1px solid #667eea;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-links a:hover {
+            background: #667eea;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        section {
+            margin: 80px 0;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 1s ease;
+        }
+
+        h2 {
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            color: #667eea;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        .intro-text {
+            font-size: 1.15em;
+            line-height: 1.8;
+            color: #d0d0d0;
+            margin-bottom: 20px;
+        }
+
+        .experience-item, .project-item, .education-item {
+            margin-bottom: 35px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 12px;
+            border-left: 3px solid #667eea;
+            transition: all 0.3s ease;
+        }
+
+        .experience-item:hover, .project-item:hover, .education-item:hover {
+            transform: translateX(5px);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .item-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .item-company {
+            font-size: 1.1em;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .item-date {
+            font-size: 0.9em;
+            color: #888;
+            font-style: italic;
+        }
+
+        .item-description {
+            color: #b0b0b0;
+            line-height: 1.7;
+            margin-top: 10px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .skill-item {
+            padding: 15px 20px;
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .skill-item:hover {
+            background: rgba(102, 126, 234, 0.2);
+            transform: scale(1.05);
+        }
+
+        .achievements-list {
+            list-style: none;
+        }
+
+        .achievements-list li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #d0d0d0;
+        }
+
+        .achievements-list li::before {
+            content: '🏆';
+            position: absolute;
+            left: 0;
+        }
+
+        .certificates-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .certificate-item {
+            padding: 12px 20px;
+            background: rgba(102, 126, 234, 0.08);
+            border-radius: 8px;
+            border-left: 3px solid #764ba2;
+            color: #d0d0d0;
+        }
+
+        .languages {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .language-item {
+            padding: 12px 25px;
+            background: rgba(118, 75, 162, 0.15);
+            border-radius: 25px;
+            border: 1px solid rgba(118, 75, 162, 0.3);
+            color: #e0e0e0;
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+
+            section {
+                padding: 25px;
+            }
+
+            .item-header {
+                flex-direction: column;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ayush Pachauri</h1>
+            <p class="subtitle">BMS (Finance) Candidate | Aspiring Investment Banker & Strategic Consultant</p>
+            <div class="contact-links">
+                <a href="mailto:ayushpachauri.jhs@gmail.com">📧 Email</a>
+                <a href="https://www.linkedin.com/in/ayushpachaurijhs" target="_blank">💼 LinkedIn</a>
+                <a href="tel:+919793034550">📱 +91 9793034550</a>
+                <a href="#">📍 Bhopal, M.P.</a>
+            </div>
+        </header>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p class="intro-text">
+                I am a driven and results-oriented BMS (Finance) candidate with a strong academic foundation and analytical skills. My passion lies in consulting and investment banking, where I can advise on complex business challenges and create tangible value for clients.
+            </p>
+            <p class="intro-text">
+                Through my internships at the Confederation of Indian Industry and Afterboards, alongside my volunteer work with Akshay Jan Seva Samiti NGO, I've developed a comprehensive skill set spanning project management, marketing strategy, and community development. These experiences have shaped my analytical approach and enhanced my ability to drive meaningful business outcomes.
+            </p>
+            <p class="intro-text">
+                My long-term vision is to evolve into a strategic leader who can shape business outcomes and drive innovation within the financial services landscape. I understand that working with forward-thinking organizations will allow me to expand my horizons while making valuable contributions to enterprises devoted to enabling growth and creating long-term value.
+            </p>
+        </section>
+
+        <section id="experience">
+            <h2>Work Experience</h2>
+            
+            <div class="experience-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-company">Confederation of Indian Industry</div>
+                        <div class="item-title">Management Intern</div>
+                    </div>
+                    <div class="item-date">Feb 2025 – Apr 2025</div>
+                </div>
+                <p class="item-description">
+                    Contributed to planning and execution of Global Investors Summit 2025, managing operations from groundwork to implementation. Coordinated multi-departmental teams for smooth event flow, communication, and logistics. Assisted high-profile stakeholders including CEOs, policymakers, and officials, gaining insights into their projects and expertise. Compiled post-event reports and engaged with industry leaders on investment opportunities and improvement areas.
+                </p>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-company">Afterboards</div>
+                        <div class="item-title">Marketing Intern</div>
+                    </div>
+                    <div class="item-date">Jul 2023 - Aug 2023</div>
+                </div>
+                <p class="item-description">
+                    Collaborated with the marketing team to develop and implement strategies that boosted sales by 50%. Created engaging content for social media platforms to increase brand awareness and assisted in the creation of key marketing materials, such as IPMAT Rohtak mocks, to effectively promote the company's products and services.
+                </p>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-company">Akshay Jan Seva Samiti (NGO)</div>
+                        <div class="item-title">Volunteer</div>
+                    </div>
+                    <div class="item-date">Aug 2022 - Present</div>
+                </div>
+                <p class="item-description">
+                    Directed and implemented a comprehensive range of community development programs, including managing food drives, afforestation initiatives, and Slum Education programs. Successfully executed a women's skill employment program for physically challenged women, alongside providing critical support in supplying medicines during the COVID-19 pandemic.
+                </p>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            
+            <div class="education-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-company">Jagran Lakecity University</div>
+                        <div class="item-title">Bachelor of Management Studies (Finance)</div>
+                    </div>
+                    <div class="item-date">2023 - 2026</div>
+                </div>
+                <p class="item-description">
+                    GPA: 8.7 / 10.0<br>
+                    Chancellor's Cup Award recipient
+                </p>
+            </div>
+
+            <div class="education-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-company">Jai Academy</div>
+                        <div class="item-title">Senior Secondary Schooling (XII – Commerce, CBSE)</div>
+                    </div>
+                    <div class="item-date">2021 - 2022</div>
+                </div>
+                <p class="item-description">
+                    Percentage: 92.6%
+                </p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Academic Projects</h2>
+            
+            <div class="project-item">
+                <div class="item-title">Financial Frontier</div>
+                <p class="item-description">
+                    <strong>Organizer</strong> | Jagran Lakecity University | September 2024
+                </p>
+            </div>
+
+            <div class="project-item">
+                <div class="item-title">Inicio 3.0</div>
+                <p class="item-description">
+                    <strong>Volunteer</strong> | Jagran Lakecity University | February 2025
+                </p>
+            </div>
+
+            <div class="project-item">
+                <div class="item-title">Amazon Dataset Analysis</div>
+                <p class="item-description">
+                    Power BI, DAX, Data Cleaning, KPIs | August 2025
+                </p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-item">Project Management</div>
+                <div class="skill-item">Video Editing</div>
+                <div class="skill-item">Teamwork</div>
+                <div class="skill-item">Time Management</div>
+                <div class="skill-item">Leadership</div>
+                <div class="skill-item">Effective Communication</div>
+                <div class="skill-item">Critical Thinking</div>
+                <div class="skill-item">Number Crunching</div>
+                <div class="skill-item">Power BI & DAX</div>
+                <div class="skill-item">Data Analysis</div>
+            </div>
+
+            <h2 style="margin-top: 50px;">Languages</h2>
+            <div class="languages">
+                <div class="language-item">English (Fluent)</div>
+                <div class="language-item">Hindi (Fluent)</div>
+                <div class="language-item">French (Intermediate)</div>
+            </div>
+        </section>
+
+        <section id="achievements">
+            <h2>Achievements</h2>
+            <ul class="achievements-list">
+                <li>Reliance Foundation Scholar</li>
+                <li>Chancellor's Cup Award, Jagran Lakecity University</li>
+                <li>Crackathon Case Study Competition - Winner</li>
+                <li>Business Hackathon - Winner</li>
+                <li>Trail of Trivia - Winner, 2024</li>
+            </ul>
+        </section>
+
+        <section id="certificates">
+            <h2>Certifications</h2>
+            <div class="certificates-list">
+                <div class="certificate-item">Introduction to Securities Market - NSE</div>
+                <div class="certificate-item">Introduction to Derivatives Market - NSE</div>
+                <div class="certificate-item">Introduction to Banking and Insurance - NSE</div>
+                <div class="certificate-item">BCG - Strategy Consulting Job Simulation</div>
+                <div class="certificate-item">Career Essentials in Generative AI by Microsoft and LinkedIn</div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2025 Ayush Pachauri. All rights reserved.</p>
+            <p>Designed with passion for finance and innovation.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Smooth scrolling animation on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(30px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
